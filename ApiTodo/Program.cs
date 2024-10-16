@@ -1,3 +1,7 @@
+TodoContext tc = new TodoContext();
+SeedData.Init(tc);
+tc.SaveChanges();
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -42,3 +46,4 @@ record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
 {
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 }
+
