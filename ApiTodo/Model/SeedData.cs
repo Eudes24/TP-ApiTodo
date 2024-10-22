@@ -4,10 +4,10 @@ public class SeedData
     {
 
 
-context.Todos.Add(new Todo {Task = "ranger vaisselle",Completed = true});
-context.Todos.Add(new Todo {Task = "gagner sur valo",Completed = false, Deadline = DateTime.Today});
-context.Todos.Add(new Todo {Task = "perdre sur JD", Completed = false});
+        context.Todos.Add(new Todo { Task = "ranger vaisselle", Completed = true });
+        context.Todos.Add(new Todo { Task = "gagner sur valo", Completed = false, Deadline = DateTime.Today });
+        context.Todos.Add(new Todo { Task = "perdre sur JD", Completed = false });
 
 
-}
+    }
 }
