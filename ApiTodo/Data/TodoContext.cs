@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 
-
 public class TodoContext : DbContext
 {
   public DbSet<Todo> Todos { get; set; } = null!;
