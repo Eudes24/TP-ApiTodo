@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-
+using Swashbuckle.AspNetCore.Annotations;
 
 [ApiController]
 [Route("api/todo")]
@@ -24,6 +24,12 @@ public class TodoController : ControllerBase
 
     // GET: api/todo/2
     [HttpGet("{id}")]
+    [SwaggerOperation(
+    Summary = "Get an item by id",
+    Description = "Returns a specific item targeted by its identifier")]
+    [SwaggerResponse(StatusCodes.Status200OK, "Item found", typeof(Todo))]
+    [SwaggerResponse(StatusCodes.Status404NotFound, "Item not found")]
+
     public async Task<ActionResult<Todo>> GetItem(int id)
     {
         // Find a specific item
